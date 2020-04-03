@@ -1,19 +1,18 @@
 package com.example.videoplayer.common;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.example.videoplayer.CustomApplication;
-import com.example.videoplayer.screen.common.dependencyinjection.CompositionRoot;
 import com.example.videoplayer.screen.common.dependencyinjection.ControllerCompositionRoot;
 
-public class BaseActivity extends AppCompatActivity {
-    ControllerCompositionRoot controllerCompositionRoot;
+public class BaseFragment  extends Fragment {
+    private ControllerCompositionRoot controllerCompositionRoot;
 
     public ControllerCompositionRoot getCompositionRoot() {
         if(controllerCompositionRoot==null){
             controllerCompositionRoot=new ControllerCompositionRoot(
-                    ((CustomApplication)getApplication()).getCompositionRoot(),
-                    this
+                    ((CustomApplication)requireActivity().getApplication()).getCompositionRoot(),
+                    requireActivity()
             );
         }
         return controllerCompositionRoot;

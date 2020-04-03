@@ -9,6 +9,11 @@ public abstract class BaseObservable<ListenerType> extends BaseViewMvc
     Set<ListenerType> mlisteners=new HashSet<>();
 
     @Override
+    public void initView() {
+
+    }
+
+    @Override
     public void registerListener(ListenerType listener) {
         mlisteners.add(listener);
     }

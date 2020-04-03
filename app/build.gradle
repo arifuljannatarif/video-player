@@ -20,6 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 
 }
 
@@ -36,18 +40,22 @@ dependencies {
 //    implementation 'com.airbnb.android:lottie:3.4.0'
 //    implementation 'com.github.HaarigerHarald:android-youtubeExtractor:v1.7.0'
 
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
     implementation 'com.writingminds:FFmpegAndroid:0.3.2'
 
+//    ffmpeg media player
+    implementation 'com.github.wseemann:FFmpegMediaPlayer:1.0.4'
     implementation 'com.google.android.exoplayer:exoplayer-core:2.11.2'
     implementation 'com.google.android.exoplayer:exoplayer-dash:2.11.2'
     implementation 'com.google.android.exoplayer:exoplayer-ui:2.11.2'
 
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-beta01'
 //    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
-//    implementation 'com.github.bumptech.glide:glide:4.11.0'
-//    implementation 'jp.wasabeef:glide-transformations:4.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'jp.wasabeef:glide-transformations:4.0.0'
 //    implementation 'com.google.firebase:firebase-firestore:21.4.1'
-//    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginBottom="6dp"
+    android:layout_marginEnd="5dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="2dp"
+        android:id="@+id/constraints"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="@android:color/transparent"
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintDimensionRatio="4:2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:background="@color/Black"
+                android:id="@+id/file_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/icon_video_thumb" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:layout_alignBottom="@id/constraints"
+        android:layout_alignEnd="@id/constraints"
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/DarkSlateGray"
+        android:elevation="3dp"
+        android:paddingHorizontal="3dp"
+        android:paddingVertical="1dp"
+        android:text="12:14"
+        android:textColor="#FFFFFF"
+        android:textSize="8dp"
+        android:textStyle="bold"  />
+
+    <TextView
+        android:layout_alignBottom="@id/constraints"
+        android:id="@+id/fileSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/DarkSlateGray"
+        android:elevation="3dp"
+        android:paddingHorizontal="3dp"
+        android:paddingVertical="1dp"
+        android:text="120mb"
+        android:textColor="#FFFFFF"
+        android:textSize="8dp"
+        android:textStyle="bold"  />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:text="filename .mp4"
+        android:textSize="16sp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/constraints"
+        android:layout_toLeftOf="@id/imageView3"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:clickable="true"
+        android:backgroundTint="@color/Red"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:srcCompat="@drawable/ic_more_vert_black_24dp"
+        android:layout_below="@id/constraints"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>
